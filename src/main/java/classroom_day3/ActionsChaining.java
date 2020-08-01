@@ -36,7 +36,7 @@ public class ActionsChaining {
     }
 
     public static void main(String[] args) {
-        day3.ActionsChaining webDriverCommands = new day3.ActionsChaining();
+        ActionsChaining webDriverCommands = new ActionsChaining();
         webDriverCommands.browserSetup();
         webDriverCommands.tryOptionsInActionsClass();
 
