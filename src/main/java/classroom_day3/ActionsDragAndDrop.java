@@ -1,13 +1,12 @@
 package classroom_day3;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 public class ActionsDragAndDrop {
@@ -32,6 +31,11 @@ public class ActionsDragAndDrop {
         System.out.println("Size of the element=" + droppableElement.getSize());
         Actions actions = new Actions(driver);
         actions.dragAndDrop(draggableElement, droppableElement).perform();
+
+        File screenshotAs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        File DestFile = new File("F://TestScreenshots//dragAndDrop");
+        FileUtils.copyFile()
+
 
         driver.findElement(By.linkText("Revert draggable Position")).click();
 
@@ -58,7 +62,7 @@ public class ActionsDragAndDrop {
     }
 */
     public static void main(String[] args) {
-        day3.ActionsDragAndDrop webDriverCommands = new day3.ActionsDragAndDrop();
+        ActionsDragAndDrop webDriverCommands = new ActionsDragAndDrop();
         webDriverCommands.browserSetup();
 
         webDriverCommands.tryOptionsInActionsClass();

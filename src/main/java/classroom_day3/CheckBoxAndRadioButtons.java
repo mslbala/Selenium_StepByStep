@@ -69,7 +69,7 @@ public class CheckBoxAndRadioButtons {
     }
 
     public static void main(String[] args) {
-        day3.CheckBoxAndRadioButtons webDriverCommands = new day3.CheckBoxAndRadioButtons();
+      CheckBoxAndRadioButtons webDriverCommands = new CheckBoxAndRadioButtons();
         try {
 
             webDriverCommands.browserSetup();
